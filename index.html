@@ -1,3 +1,47 @@
-Hello World
-test
-<p>lalalal<a href= "second.html">跳转</a></p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(测试案例)</title> 
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+<p>如果你点我，我就会消失。</p>
+<p>继续点我!</p>
+<p>接着点我!</p>
+<div ng-app="myApp" ng-controller="myCtrl" data-ng-init="names=['Jani','Hege','Kai']">
+	名:<input type="text" ng-model="firstName"><br>
+	姓:<input type="text" ng-model="lastName"><br>
+	<br>
+	姓名:{{firstName+ " "+ lastName}}
+	<p>使用 ng-repeat 来循环数组</p>
+    <ul>
+    <li data-ng-repeat="x in names">
+      {{ x }}
+    </li>
+    </ul>
+    <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+
+	Email:
+	<input type="email" name="myAddress" ng-model="myText" required>
+	<p>编辑邮箱地址，查看状态的改变。</p>
+	<h1>状态</h1>
+	<p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+	<p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+	<p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+
+	</form>
+	
+
+
+</div>
+
+<div id="abc" data-ng-app="youAp" >
+  
+</div>
+
+</body>
+</html>
